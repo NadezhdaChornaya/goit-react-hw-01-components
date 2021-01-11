@@ -1,29 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TableTrensaction } from './styleTransaction';
 
 function TransactionHistory({ items }) {
     return (
-        <table className="transaction-history">
-            <thead>
+        <TableTrensaction>
+            <thead className="transaction-head">
                 <tr>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Currency</th>
+                    <th className="transaction-cell">Type</th>
+                    <th className="transaction-cell">Amount</th>
+                    <th className="transaction-cell">Currency</th>
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody >
                 {items.map(({ id, type, amount, currency }) => {
                     return (
-                        <tr key={id}>
-                            <td>{type}</td>
-                            <td>{amount}</td>
-                            <td>{currency}</td>
+                        <tr key={id} className="transaction-body">
+                            <td className="transaction-data">{type}</td>
+                            <td className="transaction-data">{amount}</td>
+                            <td className="transaction-data">{currency}</td>
                         </tr>
                     )
                 })}
             </tbody>
-        </table>
+        </TableTrensaction>
     )
 }
 TransactionHistory.propTypes = {
