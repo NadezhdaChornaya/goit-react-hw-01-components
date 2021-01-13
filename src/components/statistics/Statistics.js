@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { randomFrom, Section, Title, ListStat, ItemStat, Label, Percentage } from './styleStatistics';
+import { randomColor, Section, Title, ListStat, ItemStat, Label, Percentage } from './styleStatistics';
 import backgroundColor from '../../data/backgroundColor.json';
 
 function Statistics({ title, stats }) {
@@ -9,7 +9,7 @@ function Statistics({ title, stats }) {
 
         <ListStat>
             {stats.map(({ id, label, percentage }) => {
-                return (<ItemStat key={id} backColor={randomFrom(backgroundColor)}>
+                return (<ItemStat key={id} backColor={randomColor(backgroundColor)}>
                     <Label>{label}</Label>
                     <Percentage>{`${percentage}%`}</Percentage>
                 </ItemStat>)

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const randomFrom = (backgroundColor) => {
+const randomColor = (backgroundColor) => {
   const randomColor = `#${backgroundColor[Math.floor(Math.random() * backgroundColor.length - 1)]}`;
   return randomColor
 };
@@ -64,4 +64,4 @@ const Percentage = styled.span`
  color: #fff;
  font-weight: 900;
 `;
-export { randomFrom, Section, Title, ListStat, ItemStat, Label, Percentage }
+export { randomColor, Section, Title, ListStat, ItemStat, Label, Percentage }
