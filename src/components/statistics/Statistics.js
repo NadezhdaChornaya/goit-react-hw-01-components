@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { randomFrom, Section, Title, ListStat, ItemStat, Label, Percentage } from './styleStatistics';
-import backgroundColor from './backgroundColor.json';
+import backgroundColor from '../../data/backgroundColor.json';
 
 function Statistics({ title, stats }) {
     return (<Section>
